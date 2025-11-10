@@ -3,8 +3,8 @@
   "env": {
     "MCP_API_KEY": "REDACTED",
     "DISABLE_INTERLEAVED_THINKING": "true",
-    "DA": "Kai",
-    "PAI_DIR": "$HOME/.claude"
+    "DA": "",
+    "PAI_DIR": "/Users/irautenbach/PAI"
   },
   "permissions": {
     "allow": [
@@ -36,7 +36,7 @@
       "Bash(diskutil coreStorage)",
       "Bash(diskutil cs)",
       "Bash(diskutil disableJournal)",
-      "Bash(diskutil resetFusion)",       
+      "Bash(diskutil resetFusion)",
       "Bash(diskutil disableOwnership)",
       "Bash(diskutil apfs deleteContainer)",
       "Bash(diskutil apfs eraseVolume)",
@@ -69,7 +69,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type PreToolUse"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/capture-all-events.ts --event-type PreToolUse"
           }
         ]
       }
@@ -80,7 +80,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type PostToolUse"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/capture-all-events.ts --event-type PostToolUse"
           }
         ]
       }
@@ -90,25 +90,26 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-session-summary.ts"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/capture-session-summary.ts"
           },
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type SessionEnd"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/capture-all-events.ts --event-type SessionEnd"
           }
         ]
       }
     ],
     "UserPromptSubmit": [
       {
+        "matcher": "*",
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/update-tab-titles.ts"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/load-dynamic-requirements.ts"
           },
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type UserPromptSubmit"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/update-tab-titles.ts"
           }
         ]
       }
@@ -118,15 +119,15 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/load-core-context.ts"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/load-core-context.ts"
           },
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/initialize-pai-session.ts"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/initialize-pai-session.ts"
           },
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type SessionStart"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/capture-all-events.ts --event-type SessionStart"
           }
         ]
       }
@@ -136,11 +137,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/stop-hook.ts"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/stop-hook.ts"
           },
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type Stop"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/capture-all-events.ts --event-type Stop"
           }
         ]
       }
@@ -150,11 +151,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/subagent-stop-hook.ts"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/subagent-stop-hook.ts"
           },
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type SubagentStop"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/capture-all-events.ts --event-type SubagentStop"
           }
         ]
       }
@@ -165,11 +166,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/context-compression-hook.ts"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/context-compression-hook.ts"
           },
           {
             "type": "command",
-            "command": "${PAI_DIR}/hooks/capture-all-events.ts --event-type PreCompact"
+            "command": "/Users/irautenbach/PAI/.claude/hooks/capture-all-events.ts --event-type PreCompact"
           }
         ]
       }
@@ -177,7 +178,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash ${PAI_DIR}/statusline-command.sh"
+    "command": "bash /Users/irautenbach/PAI/.claude/statusline-command.sh"
   },
   "feedbackSurveyState": {
     "lastShownTime": 1754071370324

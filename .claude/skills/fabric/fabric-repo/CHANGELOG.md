@@ -1,5 +1,72 @@
 # Changelog
 
+## v1.4.322 (2025-11-05)
+
+### PR [#1814](https://github.com/danielmiessler/Fabric/pull/1814) by [ksylvan](https://github.com/ksylvan): Add Concept Map in html
+
+- Add `create_conceptmap` for interactive HTML concept maps using Vis.js
+- Add `fix_typos` for proofreading and correcting text errors
+- Introduce `model_as_sherlock_freud` for psychological modeling and behavior analysis
+- Implement `predict_person_actions` for behavioral response predictions
+- Add `recommend_yoga_practice` for personalized yoga guidance
+- Credit goes to @FELIPEGUEDESBR for the pattern
+
+
+### PR [#1816](https://github.com/danielmiessler/Fabric/pull/1816) by [ksylvan](https://github.com/ksylvan): Update `anthropic-sdk-go` to v1.16.0 and update models
+
+- Upgraded `anthropic-sdk-go` from v1.13.0 to v1.16.0
+- Removed outdated model `ModelClaude3_5SonnetLatest`
+- Added new model `ModelClaudeSonnet4_5_20250929`
+- Updated anthropic beta map to include the new model
+- Updated dependencies in `go.sum` file
+
+## v1.4.321 (2025-11-03)
+
+### PR [#1803](https://github.com/danielmiessler/Fabric/pull/1803) by [dependabot[bot][bot]](https://github.com/apps/dependabot): chore(deps-dev): bump vite from 5.4.20 to 5.4.21 in /web in the npm_and_yarn group across 1 directory
+
+- Updated Vite development dependency from version 5.4.20 to 5.4.21 in the web directory
+
+### PR [#1805](https://github.com/danielmiessler/Fabric/pull/1805) by [OmriH-Elister](https://github.com/OmriH-Elister): Added several new patterns
+
+- Added new WELLNESS category with four patterns including personalized yoga practice recommendations and wellness guidance
+- Added `model_as_sherlock_freud` pattern for psychological detective analysis combining Sherlock Holmes deduction with Freudian psychology
+- Added `predict_person_actions` pattern for behavioral response predictions based on personality analysis
+- Added `fix_typos` pattern for automated proofreading and typo corrections
+- Updated ANALYSIS and SELF categories to include new wellness-related patterns and classifications
+
+### PR [#1808](https://github.com/danielmiessler/Fabric/pull/1808) by [sluosapher](https://github.com/sluosapher): Updated create_newsletter_entry pattern to generate more factual titles
+
+- Updated the title generation style; added an output example.
+
+## v1.4.320 (2025-10-28)
+
+### PR [#1780](https://github.com/danielmiessler/Fabric/pull/1780) by [marcas756](https://github.com/marcas756): feat: add extract_characters pattern
+
+- Define character extraction goals and steps with canonical naming and deduplication rules
+- Outline interaction mapping and narrative importance analysis
+- Provide comprehensive output schema with proper formatting guidelines
+- Include positive and negative examples for pattern clarity
+- Enforce restrictions on speculative motivations and non-actor inclusion
+
+### PR [#1794](https://github.com/danielmiessler/Fabric/pull/1794) by [starfish456](https://github.com/starfish456): Enhance web app docs
+
+- Remove duplicate content from the main readme and link to the web app readme
+- Update table of contents with proper nesting and fix minor formatting issues
+
+### PR [#1810](https://github.com/danielmiessler/Fabric/pull/1810) by [tonymet](https://github.com/tonymet): improve subtitle lang, retry, debugging & error handling
+
+- Improve subtitle lang, retry, debugging & error handling
+
+### Direct commits
+
+- Docs: clean up README - remove duplicate image and add collapsible updates section
+
+- Remove duplicate fabric-summarize.png screenshot
+- Wrap Updates section in HTML details/summary accordion to save space
+🤖 Generated with [Claude Code](<https://claude.com/claude-code)>
+Co-Authored-By: Claude <noreply@anthropic.com>
+- Updated CSE pattern.
+
 ## v1.4.319 (2025-09-30)
 
 ### PR [#1783](https://github.com/danielmiessler/Fabric/pull/1783) by [ksylvan](https://github.com/ksylvan): Update anthropic-sdk-go and add claude-sonnet-4-5

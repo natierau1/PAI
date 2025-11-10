@@ -296,6 +296,14 @@ Extract/analyze user job stories to understand motivations.
 
 Categorize/evaluate content by assigning labels and ratings.
 
+### model_as_sherlock_freud
+
+Builds psychological models using detective reasoning and psychoanalytic insight.
+
+### predict_person_actions
+
+Predicts behavioral responses based on psychological profiles and challenges
+
 ### prepare_7s_strategy
 
 Apply McKinsey 7S framework to analyze organizational alignment.
@@ -598,6 +606,10 @@ Transform technical docs into clearer explanations with examples.
 
 Create glossaries of advanced terms with definitions and analogies.
 
+### fix_typos
+
+Proofreads and corrects typos, spelling, grammar, and punctuation errors.
+
 ### humanize
 
 Transform technical content into approachable language.
@@ -880,6 +892,10 @@ Convert content into flashcard format for learning.
 
 ## VISUALIZATION PATTERNS
 
+### create_conceptmap
+
+Transform unstructured text or markdown content into interactive HTML concept maps using Vis.js by extracting key concepts and their logical relationships.
+
 ### create_excalidraw_visualization
 
 Create visualizations using Excalidraw.
@@ -983,3 +999,9 @@ Summarize RPG sessions capturing events, combat, and narrative.
 ### extract_jokes
 
 Extract/categorize jokes, puns, and witty remarks.
+
+## WELLNESS PATTERNS
+
+### recommend_yoga_practice
+
+Provides personalized yoga sequences, meditation guidance, and holistic lifestyle advice based on individual profiles.
