@@ -4,60 +4,83 @@ Skills for managing and working with Obsidian vault at `~/Documents/Obsidian/Per
 
 ## Overview
 
-This directory contains all Obsidian-specific skills organized with the `obsidian-` prefix for easy identification. These skills work with the Personal AI Infrastructure (PAI) to manage your Obsidian vault for personal knowledge management, GTD workflow, project tracking, and spiritual growth.
+This directory contains all Obsidian-specific skills following the **Skills-as-Containers** pattern from Anthropic's framework. All skills are now directory-based with SKILL.md files, proper YAML frontmatter, and progressive disclosure architecture.
+
+**Major Update (2025-11-10):** Migrated from single-file to directory-based structure, consolidated related workflows.
 
 ## Skills Inventory
 
-### Daily & Weekly Operations (7 skills)
-1. **obsidian-daily-note.md** - Create/update daily notes with GTD task tracking
-2. **obsidian-daily-review.md** - Structured end-of-day review format
-3. **obsidian-weekly-review.md** - Comprehensive weekly review with project progress
-4. **obsidian-monthly-review.md** ✨ NEW - Monthly review aggregating weekly reviews
-5. **obsidian-quick-capture.md** - Fast GTD capture to INBOX
-6. **obsidian-process-inbox.md** - Process INBOX notes into correct locations
-7. **obsidian-update-project.md** - Add date-stamped project updates
+### Review Workflows (1 consolidated skill) ✨ NEW
+1. **obsidian-reviews/** 📁 - Complete review workflow suite
+   - Daily review - End-of-day reflection
+   - Weekly review - Aggregation + project assessment
+   - Monthly review - Strategic planning + diary processing
+   - Shared diary project review logic
 
-### Project & Work Management (2 skills)
-8. **obsidian-project-note.md** - Create PT/OPT projects in 3 Efforts system
-9. **obsidian-meeting-notes.md** - Structured meeting documentation
+### Project Management (1 consolidated skill) ✨ NEW
+2. **obsidian-projects/** 📁 - Complete project lifecycle management
+   - Create project - New PT/OPT projects with full structure
+   - Update project - Date-stamped progress logging
+   - Shared project template
 
-### Content Processing (2 skills)
-10. **obsidian-process-clipping.md** - Transform web clippings into structured notes
-11. **obsidian-interlink.md** - Find and create bidirectional links
+### Daily Operations (2 skills)
+3. **obsidian-daily-note/** 📁 - Create/update daily notes with GTD task tracking
+4. **obsidian-quick-capture/** 📁 - Fast GTD capture to INBOX
+
+### Content Processing (3 skills)
+5. **obsidian-process-inbox/** 📁 - Process INBOX notes into correct locations
+6. **obsidian-process-clipping/** 📁 - Transform web clippings into structured notes
+7. **obsidian-interlink/** 📁 - Find and create bidirectional links
 
 ### Knowledge Organization (3 skills)
-12. **obsidian-find-connections.md** - Discover relationships between notes
-13. **obsidian-lists/** 📁 - Multi-workflow GTD LISTS management
-14. **obsidian-mocs/** 📁 ✨ NEW - Multi-workflow Maps of Content management
+8. **obsidian-find-connections/** 📁 - Discover relationships between notes
+9. **obsidian-lists/** 📁 - Multi-workflow GTD LISTS management
+10. **obsidian-mocs/** 📁 - Multi-workflow Maps of Content management
+
+### Collaboration & Documentation (1 skill)
+11. **obsidian-meeting-notes/** 📁 - Structured meeting documentation
 
 ### Spiritual Growth (1 skill)
-15. **obsidian-bible-study.md** ✨ NEW - Scripture study notes with analysis & application
-
-### Vault Maintenance (coming soon)
-16. **obsidian-vault-health/** 📁 - Vault health checks and maintenance workflows
+12. **obsidian-bible-study/** 📁 - Scripture study notes with analysis & application
 
 ## Architecture
 
-### Single-File Skills (Simple)
-Most skills are single `.md` files (~1-10KB each) with:
-- YAML frontmatter (name, description, USE WHEN triggers)
-- Clear documentation of purpose and usage
-- Templates and examples
-- Integration notes
+### Skills-as-Containers Pattern
 
-### Multi-Workflow Skills (Complex)
-Directory-based skills for complex features:
+ALL skills now follow the directory-based Skills-as-Containers pattern from Anthropic:
 
-**obsidian-lists/**
-- SKILL.md - Main routing logic
-- README.md - Quick reference
-- workflows/ - 4 specific workflows (create, add, convert, link)
-- assets/ - Templates and reference guides
+**Standard Structure:**
+```
+obsidian-[skill-name]/
+├── SKILL.md              # Core skill definition with YAML frontmatter
+├── README.md             # Quick reference (optional)
+├── workflows/            # Multi-step workflows (for complex skills)
+└── assets/               # Templates, references, shared logic
+```
 
-**obsidian-mocs/**  ✨ NEW
-- SKILL.md - Main routing logic
-- workflows/ - 4 workflows (create, update, link, organize)
-- assets/ - MOC templates and patterns
+**Simple Skills** (single-purpose):
+- `SKILL.md` with complete documentation
+- No workflows/ subdirectory needed
+- Examples: obsidian-daily-note, obsidian-quick-capture
+
+**Complex Skills** (multi-workflow):
+- `SKILL.md` with routing logic
+- `workflows/` with specific task workflows
+- `assets/` with shared resources
+- Examples: obsidian-reviews, obsidian-projects, obsidian-lists, obsidian-mocs
+
+### Consolidated Skills
+
+**obsidian-reviews/** - Consolidated 3 separate skills:
+- Daily review (was: obsidian-daily-review.md)
+- Weekly review (was: obsidian-weekly-review.md)
+- Monthly review (was: obsidian-monthly-review.md)
+- Shared diary project review logic in assets/
+
+**obsidian-projects/** - Consolidated 2 separate skills:
+- Create project (was: obsidian-project-note.md)
+- Update project (was: obsidian-update-project.md)
+- Shared project template in assets/
 
 ## Vault Structure
 
@@ -115,41 +138,36 @@ User says: "create MOC for Machine Learning"
 1. **Capture**: obsidian-quick-capture → 0 INBOX/
 2. **Clarify**: obsidian-process-inbox → appropriate location
 3. **Organize**: obsidian-interlink, obsidian-find-connections
-4. **Review**: obsidian-daily-review → obsidian-weekly-review → obsidian-monthly-review
-5. **Engage**: obsidian-project-note, obsidian-update-project
+4. **Review**: obsidian-reviews (daily → weekly → monthly)
+5. **Engage**: obsidian-projects (create, update)
 
 ### Knowledge Building
 1. **Collect**: obsidian-process-clipping, obsidian-quick-capture
 2. **Connect**: obsidian-find-connections, obsidian-interlink
 3. **Organize**: obsidian-lists, obsidian-mocs
-4. **Apply**: obsidian-project-note (link knowledge to projects)
+4. **Apply**: obsidian-projects (link knowledge to projects)
 
 ### Spiritual Practice
 1. **Study**: obsidian-bible-study (passage/character/topical)
-2. **Reflect**: obsidian-daily-review (spiritual growth section)
-3. **Review**: obsidian-weekly-review, obsidian-monthly-review (spiritual insights)
+2. **Reflect**: obsidian-reviews/daily-review (spiritual growth section)
+3. **Review**: obsidian-reviews/weekly-review, monthly-review (spiritual insights)
 
-## New Skills Added (2025-11-09)
+## Recent Updates
 
-✨ **obsidian-monthly-review.md** - Comprehensive monthly review
-- Aggregates weekly reviews
-- Tracks goal achievement rates
-- Processes Diary "Review Projects" files
-- Plans next month priorities
-- Connects to quarterly/annual planning
+### 2025-11-10: Skills-as-Containers Migration
+✨ **Major Architectural Upgrade**
+- Migrated all 15 skills from single-file to directory-based structure
+- Consolidated 5 skills into 2 comprehensive multi-workflow skills:
+  - **obsidian-reviews/** (daily, weekly, monthly reviews)
+  - **obsidian-projects/** (create, update projects)
+- Extracted shared logic (diary review processing, project templates)
+- All skills now follow Anthropic's Skills-as-Containers pattern
+- Improved discoverability and maintainability
 
-✨ **obsidian-bible-study.md** - Scripture study notes
-- Passage study with observation/interpretation/application
-- Character study templates
-- Topical study structures
-- Integrates with daily/weekly reviews
-
+### 2025-11-09: New Skills
+✨ **obsidian-monthly-review** - Monthly strategic review
+✨ **obsidian-bible-study** - Scripture study notes
 ✨ **obsidian-mocs/** - Maps of Content management
-- Create new MOCs with proper structure
-- Update existing MOCs with new notes
-- Link MOCs and notes bidirectionally
-- Reorganize MOC hierarchies
-- Templates and organization patterns
 
 ## Skill Naming Convention
 
@@ -170,9 +188,9 @@ All skills follow these standards:
 ## Maintenance
 
 ### Regular Reviews
-- Daily: obsidian-daily-review
-- Weekly: obsidian-weekly-review (includes Diary project review check)
-- Monthly: obsidian-monthly-review (processes Diary review files)
+- Daily: obsidian-reviews (daily-review workflow)
+- Weekly: obsidian-reviews (weekly-review workflow, includes Diary project review check)
+- Monthly: obsidian-reviews (monthly-review workflow, processes Diary review files)
 - As needed: obsidian-vault-health (coming soon)
 
 ### Best Practices
@@ -193,15 +211,28 @@ All skills follow these standards:
 ## Contributing
 
 When adding new Obsidian skills:
-1. Use `obsidian-` prefix in filename
-2. Add YAML frontmatter with name, description, USE WHEN
-3. Reference correct vault path: `~/Documents/Obsidian/Personal/`
-4. Follow template version "1.18" for note structures
-5. Document integration with other skills
-6. Update this README with new skill info
+1. Use `obsidian-` prefix in directory name
+2. Create directory structure with SKILL.md file
+3. Add YAML frontmatter with name, description, USE WHEN triggers
+4. Reference correct vault path: `~/Documents/Obsidian/Personal/`
+5. Follow template version "1.18" for note structures
+6. For complex skills, create workflows/ and assets/ subdirectories
+7. Add README.md for quick reference (optional but recommended)
+8. Document integration with other skills
+9. Update this README with new skill info
+
+**Skills-as-Containers Best Practices:**
+- Single-purpose skills: Just SKILL.md is sufficient
+- Multi-workflow skills: Add workflows/ subdirectory
+- Shared resources: Extract to assets/ subdirectory
+- Follow progressive disclosure pattern
 
 ---
 
-**Total Skills**: 15 skills (12 single-file + 3 multi-workflow directories)
-**Last Updated**: 2025-11-09
+**Total Skills**: 12 directory-based skills
+- 2 consolidated multi-workflow skills (reviews, projects)
+- 10 single-purpose skills
+- All following Skills-as-Containers pattern
+
+**Last Updated**: 2025-11-10
 **Vault Location**: `~/Documents/Obsidian/Personal/`
