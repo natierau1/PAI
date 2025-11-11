@@ -76,9 +76,9 @@ This skill activates when the user requests research or information gathering:
 
 ## Available Research Agents
 
-- **perplexity-researcher**: Fast Perplexity API searches (web/current)
+- **perplexity-researcher**: Fast Perplexity API searches (web/current) - RECOMMENDED for parallel research
 - **claude-researcher**: Claude WebSearch with intelligent query decomposition (academic/detailed)
-- **gemini-researcher**: Google Gemini multi-perspective research (synthesis)
+- **gemini-researcher**: Google Gemini multi-perspective research (synthesis) - ⚠️ FREE TIER: 2 requests/min limit, not suitable for parallel execution
 - **research-orchestrator**: Strategic orchestrator that analyzes queries, decomposes into 2-3 angles, and coordinates perplexity subagents (NEW)
 
 ## Speed Benefits
