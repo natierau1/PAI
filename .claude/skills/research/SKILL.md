@@ -1,6 +1,6 @@
 ---
 name: research
-description: Multi-source comprehensive research using perplexity-researcher, claude-researcher, and gemini-researcher agents. Three modes - Quick (3 agents), Standard (9 agents), Extensive (24 agents with be-creative skill). USE WHEN user says 'do research', 'quick research', 'extensive research', 'find information about', 'investigate', 'analyze trends', 'current events', or any research-related request.
+description: Multi-source comprehensive research using perplexity-researcher, claude-researcher, gemini-researcher, and research-orchestrator agents. Four modes - Quick (3 agents), Standard (9 agents), Extensive (24 agents), Orchestrated (2-3 strategic agents). USE WHEN user says 'do research', 'quick research', 'extensive research', 'orchestrate research', 'strategic research', 'find information about', 'investigate', 'analyze trends', 'current events', or any research-related request.
 ---
 
 # Research Skill
@@ -30,7 +30,7 @@ This skill activates when the user requests research or information gathering:
 - "Current events research"
 - Any comprehensive information gathering request
 
-**THREE RESEARCH MODES:**
+**FOUR RESEARCH MODES:**
 
 **QUICK RESEARCH MODE:**
 - User says "quick research" → Launch 3 agents (1 of each type)
@@ -49,10 +49,18 @@ This skill activates when the user requests research or information gathering:
 - **Timeout: 10 minutes** | Main Kai waits 10 minutes then synthesizes
 - Best for: Deep-dive research, multi-domain analysis, comprehensive reports
 
+**ORCHESTRATED RESEARCH MODE (NEW):**
+- User says "orchestrate research", "strategic research", "research from multiple angles"
+- Deep query analysis → Strategic decomposition → 2-3 focused perplexity agents
+- **Timeout: 3 minutes** | Thoughtful synthesis with cross-validation
+- Best for: Strategic decisions, product recommendations, queries needing multiple perspectives
+- Advantages: Quality over quantity, custom prompts per angle, intelligent synthesis
+
 **⏱️ CRITICAL TIMEOUT RULES:**
 - **Quick (3 agents): 2 minute timeout**
 - **Standard (9 agents): 3 minute timeout**
 - **Extensive (24 agents): 10 minute timeout**
+- **Orchestrated (2-3 agents): 3 minute timeout**
 - After timeout, main Kai STOPS WAITING and synthesizes with whatever results are available
 - Proceed with partial results - don't wait indefinitely for stragglers
 
@@ -68,9 +76,10 @@ This skill activates when the user requests research or information gathering:
 
 ## Available Research Agents
 
-- **perplexity-researcher**: Fast Perplexity API searches (web/current)
+- **perplexity-researcher**: Fast Perplexity API searches (web/current) - RECOMMENDED for parallel research
 - **claude-researcher**: Claude WebSearch with intelligent query decomposition (academic/detailed)
-- **gemini-researcher**: Google Gemini multi-perspective research (synthesis)
+- **gemini-researcher**: Google Gemini multi-perspective research (synthesis) - ⚠️ FREE TIER: 2 requests/min limit, not suitable for parallel execution
+- **research-orchestrator**: Strategic orchestrator that analyzes queries, decomposes into 2-3 angles, and coordinates perplexity subagents (NEW)
 
 ## Speed Benefits
 
@@ -78,6 +87,7 @@ This skill activates when the user requests research or information gathering:
 - ✅ **Quick mode**: 3 parallel agents → **2 minute timeout**
 - ✅ **Standard mode**: 9 parallel agents → **3 minute timeout**
 - ✅ **Extensive mode**: 24 parallel agents → **10 minute timeout**
+- ✅ **Orchestrated mode**: 2-3 strategic agents → **3 minute timeout** (NEW)
 
 **⏱️ CRITICAL: After timeout, proceed with whatever results are available. DO NOT wait indefinitely for slow agents.**
 
